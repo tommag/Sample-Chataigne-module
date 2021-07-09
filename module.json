@@ -1,0 +1,67 @@
+{
+  "name":"My custom module",
+  "type":"OSC",
+  "path":"Custom",
+  
+  "version":"1.0.0",
+  "description":"My module description",
+  "url":"https://github.com/tommag/Sample-Chataigne-module",
+  "downloadURL":"https://github.com/tommag/Sample-Chataigne-module/archive/master.zip",
+
+  "hasInput":true,
+  "hasOutput":true, 
+
+  "hideDefaultCommands":false,
+  
+  "defaults":
+  {	
+    "autoAdd":false,
+    "oscInput":
+    {
+      "localPort":9001
+    }
+  },
+
+  "parameters":
+  {
+    "Module param":
+    {
+      "type":"Integer"
+    }
+  },
+
+  "hideDefaultParameters": [ "autoAdd", "oscInput/localPort"],
+
+  "scripts": 
+  [
+    "moduleScript.js"
+  ],
+
+  "values":
+  {
+    "Module value":
+    {
+      "type":"Float"
+    }
+  },
+
+  "commands":
+  {
+    
+    "Custom command":
+    {
+      "menu":"",  
+      "callback":"customCmd",
+      "parameters":
+      {
+        "Value":
+        {
+          "type":"Integer",
+          "min":0,
+          "max":100,
+          "default":0
+        }
+      }
+    }
+  }
+}
