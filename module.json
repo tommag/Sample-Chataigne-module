@@ -14,11 +14,20 @@
   "hideDefaultCommands":false,
   
   "defaults":
-  {	
+  {
     "autoAdd":false,
-    "oscInput":
+    "OSC Outputs":
     {
-      "localPort":9001
+      "OSC Output":
+      {
+        "local":true,
+        "remotePort":9001
+      }
+    },
+    "OSC Input":
+    {
+      "enabled":false,
+      "localPort":9002
     }
   },
 
@@ -30,7 +39,7 @@
     }
   },
 
-  "hideDefaultParameters": [ "autoAdd", "oscInput/localPort"],
+  "hideDefaultParameters": [ "autoAdd" ],
 
   "scripts": 
   [

@@ -1,3 +1,7 @@
+// OSC script API available on `local`: local.send(address, ...args), local.sendTo(ip, port, address, ...args),
+// local.match(pattern, address) for wildcard matching, local.register(pattern, callbackName) for a scoped callback.
+// Define oscEvent(address, args, senderIP) to receive every incoming message regardless of declared values.
+
 function init() {
   script.log("Custom module init");
 }
